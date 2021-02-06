@@ -15,11 +15,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.static(__dirname + "/sites"));
+app.use(express.static(__dirname + "/assets"));
 
 app.get("/", (req, res) => {
-  res.json({
-    status: "ACTIVE",
-  });
+  res.sendFile(__dirname + "/assets/index.html");
 });
 
 app.post("/scrape", async (req, res) => {

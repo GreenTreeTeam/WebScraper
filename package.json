@@ -35,6 +35,6 @@
   "scripts": {
     "start": "yarn build:tsc && yarn build:parcel && node build/index",
     "build:tsc": "tsc",
-    "build:parcel": "parcel build index.html"
+    "build:parcel": "parcel build index.html --out-dir dist"
   }
 }

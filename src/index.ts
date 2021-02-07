@@ -25,8 +25,7 @@ app.get("/", (req, res) => {
 app.post("/scrape", async (req, res) => {
   let url_to_scrape: string = req.headers.url;
 
-  var random_string =
-    Date.now() * Math.floor(Math.random() * 100 * Math.random());
+  var random_string = (Date.now() * Math.floor(Math.random() * 100 * Math.random())).toString();
 
   if (!url_to_scrape.startsWith("http"))
     url_to_scrape = "https://" + url_to_scrape;

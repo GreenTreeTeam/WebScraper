@@ -14,8 +14,9 @@
     <meta property="og:image" content="https://scrape.greentree.cf/images/logo.png" />
     <meta property="og:description" content="An simple tool made with server side and client side for Scraping Websites and download them." />
     <meta name="theme-color" content="#7701F7">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="/css/main.scss">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 <body>
     <div class="mainHeader">
@@ -24,7 +25,7 @@
     </div>
 
     <div class="inputField">
-        <div class="ui action inverted input">
+        <div id="inputCSS" class="ui action inverted input">
             <input id="input" type="text" value="" placeholder="https://google.com">
             <button id="scrape" class="ui violet right labeled icon button">
               <i class="download icon"></i>
@@ -33,7 +34,12 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/src/index.ts"></script>
+    <div class="download" id="DownloadingArea">
+        
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="/index.ts"></script>
 </body>
 </html>

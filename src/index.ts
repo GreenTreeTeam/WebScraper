@@ -9,22 +9,23 @@ import path from "path";
 import crypto from "crypto";
 
 import fs from "fs";
+import path from "path"
 import zipper from "zip-a-folder";
 
 const app = express();
 
 app.use(cors());
-app.use(express.static(__dirname + "/sites"));
-app.use(express.static(__dirname + "/assets"));
+app.use(express.static(path.join(__dirname, "sites")));
+app.use(express.static(path.join(__dirname, "..", "dist")));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/assets/index.html");
+  res.sendFile(path.join(__dirname, "..", "dist", "index.html"));
 });
 
 app.post("/scrape", async (req, res) => {
   let url_to_scrape: string = req.headers.url;
 
-  var random_string = crypto.randomBytes(10).toString("base64");
+  var random_string = Date.now() * Math.floor(Math.random() * 100 * Math.random())
 
   if (!url_to_scrape.startsWith("http"))
     url_to_scrape = "https://" + url_to_scrape;
@@ -53,7 +54,7 @@ app.post("/scrape", async (req, res) => {
           if (err) throw err;
           res.json({
             //@ts-expect-error Make sure to change this to URL ;-;-;-;-;-;-;-;
-            url: `http://localhost/${random_string}.zip`,
+            url: `${random_string}.zip`,
           });
         }
       );

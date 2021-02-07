@@ -9,7 +9,7 @@ import path from "path";
 import crypto from "crypto";
 
 import fs from "fs";
-import path from "path"
+import path from "path";
 import zipper from "zip-a-folder";
 
 const app = express();
@@ -25,7 +25,8 @@ app.get("/", (req, res) => {
 app.post("/scrape", async (req, res) => {
   let url_to_scrape: string = req.headers.url;
 
-  var random_string = Date.now() * Math.floor(Math.random() * 100 * Math.random())
+  var random_string =
+    Date.now() * Math.floor(Math.random() * 100 * Math.random());
 
   if (!url_to_scrape.startsWith("http"))
     url_to_scrape = "https://" + url_to_scrape;
@@ -37,6 +38,7 @@ app.post("/scrape", async (req, res) => {
       new ScraperPlugins({
         launchOptions: {
           headless: true,
+          args: [" --no-sandbox"],
         },
       }),
     ],

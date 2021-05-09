@@ -25,7 +25,7 @@
     "website-scraper-puppeteer": "^0.1.5",
     "zip-a-folder": "^0.0.12",
     "@types/jquery": "^3.5.5",
-    "parcel": "^2.0.0-nightly.574",
+    "parcel": "1.12.4",
     "postcss": "^8.2.4"
   },
   "devDependencies": {

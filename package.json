@@ -20,7 +20,7 @@
     "@types/node": "^14.14.25",
     "archiver": "^5.2.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.20.0",
     "website-scraper": "^4.2.3",
     "website-scraper-puppeteer": "^0.1.5",
     "zip-a-folder": "^0.0.12",

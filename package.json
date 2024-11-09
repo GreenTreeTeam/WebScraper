@@ -17,16 +17,16 @@
     "@types/archiver": "^5.1.0",
     "@types/cors": "^2.8.9",
     "@types/express": "^4.17.11",
+    "@types/jquery": "^3.5.5",
     "@types/node": "^14.14.25",
     "archiver": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.20.0",
+    "parcel": "1.12.4",
+    "postcss": "^8.2.13",
     "website-scraper": "^4.2.3",
     "website-scraper-puppeteer": "^0.1.5",
-    "zip-a-folder": "^0.0.12",
-    "@types/jquery": "^3.5.5",
-    "parcel": "1.12.4",
-    "postcss": "^8.2.13"
+    "zip-a-folder": "^0.0.12"
   },
   "devDependencies": {
     "sass": "^1.32.6",
